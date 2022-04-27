@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "dicom_parcer_py"
+version = "1.5.7"
+description = "extract specific tags from DICOM files"
+authors = ["Emile Averill <averille.cloud.dev@gmail.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["dicom", "tags"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+chardet = "*"
+pathvalidate = "*"
+pydicom = "*"
+pandas = "*"
+numpy = "*"
+Faker = "*"
+toml = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+coverage = "*"
+flake8 = "*"
+pre-commit = "*"
+pylint = "*"
+pytest = "*"
+yapf = "*"
+
+[tool.black]
+line-length = 80
+target-version = ["py39"]
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_before_comment = 2
+
+[tool.yapfignore]
+ignore_patterns = [
+  "temp/**/*.py"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

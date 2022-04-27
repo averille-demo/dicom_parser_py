@@ -1,0 +1,12 @@
+[flake8]
+ignore = E124,E501,W503,W504
+max-line-length = 90
+exclude =
+    .git,
+    __pycache__,
+    *.egg-info,
+    .nox,
+    .pytest_cache,
+    build,
+    dist
+max-complexity = 15
